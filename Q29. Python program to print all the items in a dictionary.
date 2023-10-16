@@ -1,0 +1,11 @@
+def print_dictionary_items(dictionary):
+        for key, value in dictionary.items():
+        print(f"{key}: {value}")
+
+my_dict = {
+    "name": "Alice",
+    "age": 25,
+    "city": "Paris"
+}
+print("Dictionary items:")
+print_dictionary_items(my_dict)
