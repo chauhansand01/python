@@ -1,0 +1,19 @@
+def find_largest_number(arr):
+    if len(arr) == 0:
+        return None
+    else:
+        largest = arr[0]
+        for num in arr:
+            if num > largest:
+                largest = num
+        return largest
+
+elements = input("Enter a list of elements separated by spaces: ").split()
+elements = [int(x) for x in elements]  
+
+largest_number = find_largest_number(elements)
+
+if largest_number is not None:
+    print("the largest number in the list is:", largest_number)
+else:
+    print("the list is empty.")
