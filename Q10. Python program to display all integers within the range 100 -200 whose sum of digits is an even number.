@@ -1,0 +1,16 @@
+def sum_of_digits(n):
+    total = 0
+
+    while n > 0:
+        digit = n % 10  
+        total += digit  
+        n //= 10       
+
+        return total
+
+print("Integers within the range 100 to 200 whose sum of digits is even:")
+
+for number in range(100, 201):
+    digit_sum = sum_of_digits(number)
+    if digit_sum % 2 == 0:
+        print(number)
