@@ -1,0 +1,17 @@
+def insert_number_at_position(lst, number, position):
+    if position < 0:
+        position = 0
+    if position > len(lst):
+        position = len(lst)
+    
+    return lst[:position] + [number] + lst[position:]
+
+elements = input("enter a list of elements separated by spaces: ").split()
+elements = [int(x) for x in elements]  # Convert elements to integers
+
+number = int(input("enter the number to insert: ")
+position = int(input("enter the position to insert (0-indexed): "))
+
+new_list = insert_number_at_position(elements, number, position)
+
+print("updated list:", new_list) 
