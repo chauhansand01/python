@@ -1,0 +1,41 @@
+def matrix_multiplication(matrix1, matrix2):
+    if len(matrix1[0]) != len(matrix2):
+        return None 
+
+    result = []
+    for i in range(len(matrix1)):
+        row = []
+        for j in range(len(matrix2[0]):
+            dot_product = 0
+            for k in range(len(matrix2)):
+                dot_product += matrix1[i][k] * matrix2[k][j]
+            row.append(dot_product)
+        result.append(row)
+
+    return result
+
+rows1 = int(input("Enter the number of rows for the first matrix: "))
+columns1 = int(input("Enter the number of columns for the first matrix: "))
+rows2 = int(input("Enter the number of rows for the second matrix: "))
+columns2 = int(input("Enter the number of columns for the second matrix: "))
+
+print("Enter elements of the first matrix:")
+matrix1 = []
+for i in range(rows1):
+    row = [int(x) for x in input().split()]
+    matrix1.append(row)
+
+print("Enter elements of the second matrix:")
+matrix2 = []
+for i in range(rows2):
+    row = [int(x) for x in input().split()]
+    matrix2.append(row)
+
+result = matrix_multiplication(matrix1, matrix2)
+
+if result is not None:
+    print("Matrix multiplication result:")
+    for row in result:
+        print(" ".join(map(str, row)))
+else:
+    print("The number of columns in the first matrix must be equal to the number of rows in the second matrix for multiplication.")
