@@ -1,0 +1,32 @@
+import math
+
+def find_roots(a, b, c):
+    discriminant = b**2 - 4 * a * c
+
+    if discriminant > 0:
+        root1 = (-b + math.sqrt(discriminant)) / (2 * a)
+        root2 = (-b - math.sqrt(discriminant)) / (2 * a)
+        return root1, root2
+    elif discriminant == 0:
+        root = -b / (2 * a)
+        return root,
+    else:
+        realPart = -b / (2 * a)
+        imaginaryPart = math.sqrt(abs(discriminant)) / (2 * a)
+        return complex(realPart, imaginaryPart), complex(realPart, -imaginaryPart)
+
+a = float(input("enter the coefficient 'a': "))
+b = float(input("enter the coefficient 'b': "))
+c = float(input("enter the coefficient 'c': "))
+
+roots = find_roots(a, b, c)
+
+if len(roots) == 2:
+    root1, root2 = roots
+    print(f"the roots are: {root1} and {root2}")
+elif len(roots) == 1:
+    root = roots[0]
+    print(f"the root is: {root}")
+else:
+    root1, root2 = roots
+    print(f"the roots are complex: {root1} and {root2}")
