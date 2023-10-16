@@ -1,0 +1,14 @@
+def find_product(numbers):
+    product = 1
+    for number in numbers:
+        product *= number
+    return product
+
+numbers = input("Enter a set of real numbers separated by spaces: ")
+numbers = [float(x) for x in numbers.split()]
+
+if len(numbers) > 0:
+    result = find_product(numbers)
+    print(f"The product of the numbers is: {result}")
+else:
+    print("Please enter at least one number.")
