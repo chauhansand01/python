@@ -1,0 +1,14 @@
+import math
+
+def calculate_geometric_mean(numbers):
+    product = 1.0
+    n = len(numbers)
+
+    for num in numbers:
+        product *= num
+
+    geometric_mean = math.pow(product, 1/n)
+    return geometric_mean
+
+number_str = input("enter the numbers separated by spaces: ")
+numbers = [float(x) for x in number_str.split()]
