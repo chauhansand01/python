@@ -1,0 +1,11 @@
+elements = input("Enter a list of elements separated by spaces: ").split()
+elements = [int(x) for x in elements]  # Convert elements to integers
+
+index_to_delete = int(input("Enter the index of the element to delete: "))
+
+if 0 <= index_to_delete < len(elements):
+    elements = elements[:index_to_delete] + elements[index_to_delete + 1:]
+    print("Element at index", index_to_delete, "deleted.")
+    print("Updated list:", elements)
+else:
+    print("Invalid index. Index should be between 0 and", len(elements) - 1)
