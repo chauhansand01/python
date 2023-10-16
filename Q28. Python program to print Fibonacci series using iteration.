@@ -1,0 +1,17 @@
+def print_fibonacci_series(n):
+    a, b = 0, 1
+    count = 0
+
+    while count < n:
+        print(a, end=" ")
+        next_term = a + b
+        a, b = b, next_term
+        count += 1
+
+n = int(input("enter the number of terms in the Fibonacci series: "))
+
+if n <= 0:
+    print("Please enter a positive integer.")
+else:
+    print("fibonacci series:")
+    print_fibonacci_series(n)
