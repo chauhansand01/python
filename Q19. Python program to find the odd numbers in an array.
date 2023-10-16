@@ -1,0 +1,12 @@
+def find_odd_numbers(arr):
+    odd_numbers = []
+    for num in arr:
+        if num % 2 != 0:
+            odd_numbers.append(num)
+    return odd_numbers
+
+elements = input("Enter an array of elements separated by spaces: ").split()
+elements = [int(x) for x in elements]  # Convert elements to integers
+
+odd_numbers = find_odd_numbers(elements)
+print("Odd numbers in the array:", odd_numbers)
