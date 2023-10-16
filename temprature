@@ -1,0 +1,6 @@
+def celsius_to_fahrenheit(celsius)
+farenheit = (celsius*9/5)+32
+return fahrenheit
+celsius=float(input("enter temperature in celsius"))
+farenheit=celsius_to_farenheit(celsius)
+print(f"{celcius}°C is equal to {farenheit}°F")
