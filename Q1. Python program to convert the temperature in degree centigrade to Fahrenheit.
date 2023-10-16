@@ -1,4 +1,3 @@
-Q1. Python program to convert the temperature in degree cenƟgrade to Fahrenheit.
 def celsius_to_fahrenheit(celsius):
  fahrenheit = (celsius * 9/5) + 32
  return fahrenheit
