@@ -12,3 +12,8 @@ def calculate_geometric_mean(numbers):
 
 number_str = input("enter the numbers separated by spaces: ")
 numbers = [float(x) for x in number_str.split()]
+if len(numbers) > 0:
+    geometric_mean = calculate_geometric_mean(numbers)
+    print(f"The geometric mean is: {geometric_mean:.2f}")
+else:
+    print("Please enter at least one number.")
