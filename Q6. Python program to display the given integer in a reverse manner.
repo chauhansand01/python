@@ -1,0 +1,11 @@
+Q6. Python program to display the given integer in a reverse manner. 
+def reverse_integer(number):
+    # Convert the integer to a string, reverse it, and convert it back to an integer
+    reversed_str = str(number)[::-1]
+    reversed_number = int(reversed_str)
+    return reversed_number
+
+number = int(input("Enter an integer: "))
+
+reversed_number = reverse_integer(number)
+print(f"The integer in reverse is: {reversed_number}")
